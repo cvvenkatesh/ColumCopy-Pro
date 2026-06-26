@@ -74,14 +74,6 @@ Click the **Settings** link inside the toolbar popup (or right-click the extensi
 
 ---
 
-## 🧪 Local Testing
-
-You can verify all extension operations using the built-in offline test suite:
-1.  Open the local test page: [TEST-TABLE.html](file:///d:/ColumnCopy-Pro/ColumnCopy-Pro/TEST-TABLE.html)
-2.  Interact with the sample tables to verify copying, context menu exports, multi-select bar actions, and hyperlink formatting settings.
-
----
-
 ## 📝 License
 
 Distributed under the MIT License. See [LICENSE](file:///d:/ColumnCopy-Pro/ColumnCopy-Pro/LICENSE) for more details.
