@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ColumnCopy Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f0eee6;
+      --text: #1f1e1d;
+      --text-secondary: #5e5d59;
+      --border: #d1cfc5;
+      --link-hover: #5e5d59;
+      --selection: rgba(0, 100, 255, 0.26);
+    }
+
+    /* Dark Mode Inversion (Standard CWS preferences-color-scheme) */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1f1e1d;
+        --text: #f0eee6;
+        --text-secondary: #b0aea5;
+        --border: #3d3d3a;
+        --link-hover: #b0aea5;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Newsreader", "Georgia", "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      padding: 6rem 20px;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s linear, color 0.2s linear;
+    }
+
+    ::selection {
+      background-color: var(--selection);
+      color: inherit;
+    }
+
+    .container {
+      max-width: 38.75rem; /* 620px — narrow readable column matching darioamodei.com */
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1.title {
+      font-size: 3.1rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.2em;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1.2em;
+    }
+
+    ul {
+      margin-bottom: 1.2em;
+      padding-left: 2em;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      text-decoration-thickness: 0.08em;
+      transition: color 0.2s linear;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+
+    .badge {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.85em;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .badge {
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    hr.dinkus {
+      border: none;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    hr.dinkus::after {
+      content: "⁂";
+      display: block;
+      font-size: 1.8rem;
+      color: var(--text-secondary);
+      line-height: 1;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 1rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1 class="title">Privacy Policy</h1>
+      <p class="subtitle">Last Updated: June 26, 2026</p>
+    </header>
+
+    <section>
+      <p><strong>ColumnCopy Pro</strong> is dedicated to providing high-quality productivity utilities while strictly respecting your privacy. This policy documents our simple data handling rules: <strong>we do not collect, transmit, or monitor your personal data. The extension functions entirely locally on your device.</strong></p>
+    </section>
+
+    <hr class="dinkus">
+
+    <section>
+      <h2>1. Zero Remote Data Collection</h2>
+      <p>ColumnCopy Pro does not run backend scripts, databases, or API integrations. It does not monitor or transmit:</p>
+      <ul>
+        <li>Your browsing history, websites visited, or search queries.</li>
+        <li>The contents of tables, columns, or cell values you inspect, select, copy, or export.</li>
+        <li>Your IP address, location data, or browser device identifiers.</li>
+      </ul>
+      <p>Because there is no remote connection associated with this utility, your table copying data remains completely private and cannot be read by the developer or any third party.</p>
+    </section>
+
+    <section>
+      <h2>2. Use of Local Web Storage</h2>
+      <p>The extension uses your browser's local sandbox storage engine (<span class="badge">chrome.storage.local</span>) to persist settings on your machine. This local configuration includes:</p>
+      <ul>
+        <li><strong>Preferences:</strong> Your selected keyboard hotkeys, custom row/column separators, cells wrapper styles, and link formatting preferences.</li>
+        <li><strong>History Log:</strong> A local list of your last 20 table copying actions, displayed in the popup to allow quick reuse.</li>
+        <li><strong>Pins:</strong> Table indices and column layouts you have pinned on specific web hosts, allowing the extension to remember columns when you return.</li>
+      </ul>
+      <p>None of this data is uploaded. It is stored on your device and is permanently deleted if you clean your browser cache, clear history in the options page, or uninstall the extension.</p>
+    </section>
+
+    <section>
+      <h2>3. Purpose of Requested Permissions</h2>
+      <p>When loading the extension, ColumnCopy Pro requests specific browser permissions to allow table copying. Their exact roles are:</p>
+      <ul>
+        <li><span class="badge">contextMenus</span> — Allows choices like "Copy entire table" or "Export column as CSV" to appear when you right-click on a page table cell.</li>
+        <li><span class="badge">clipboardWrite</span> — Needed to write the formatted data (CSV, Markdown, SQL, etc.) directly into your operating system clipboard.</li>
+        <li><span class="badge">storage</span> — Needed to store settings, pins, and history locally on your device.</li>
+        <li><span class="badge">tabs</span> — Used solely to read the current website hostname to check if you have pinned a column on that host.</li>
+        <li><span class="badge">Host Permissions</span> (http://*/*, https://*/*, file://*/*) — Allows the extension scripts to run on pages you browse, listening for clicks on table cells.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Advertising and Trackers</h2>
+      <p>ColumnCopy Pro has no business relationships with ad networks or data brokers. It contains no telemetry, ads, or cookies. It does not run Google Analytics or other web trackers.</p>
+    </section>
+
+    <section>
+      <h2>5. Changes to this Policy</h2>
+      <p>This privacy policy may be updated periodically to account for additions to standard browser extension policies or modifications to security standards. Any revisions will be posted directly to this URL page.</p>
+    </section>
+
+    <footer>
+      <p>ColumnCopy Pro &mdash; Open Free Edition</p>
+      <p>Source Code & Support: <a href="https://github.com/jamesandres/ColumnCopy" target="_blank" rel="noopener noreferrer">github.com/jamesandres/ColumnCopy</a></p>
+    </footer>
+  </div>
+
+</body>
+</html>

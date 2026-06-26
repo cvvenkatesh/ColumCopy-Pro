@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.CC-animated { animation-duration:1s; animation-fill-mode:both; }
+
+@keyframes CC-copiedToClipboard {
+    0% { transform:scale(1);   box-shadow:none; }
+   50% { transform:scale(1.1); box-shadow:0 0 5px 2px rgba(0,128,255,0.5); }
+  100% { transform:scale(1);   box-shadow:none; }
+}
+.CC-copiedToClipboard { animation-name:CC-copiedToClipboard; }
+
+
+
+/* ── Toast ── */
+.CC-toast {
+  position:fixed; bottom:28px; right:28px; z-index:2147483646;
+  background:#1a1a2e; color:#fff;
+  padding:10px 18px; border-radius:8px; font-size:13px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+  opacity:0; transform:translateY(10px);
+  transition:opacity 0.25s ease,transform 0.25s ease;
+  pointer-events:none;
+}
+.CC-toast.CC-toast-visible { opacity:1; transform:translateY(0); }
+
+/* ── Action toast (with button) ── */
+.CC-toast-action {
+  display:flex; align-items:center; gap:10px;
+  max-width:420px; pointer-events:auto;
+}
+.CC-toast-msg { flex:1; }
+.CC-toast-btn {
+  background:#667eea; color:#fff; border:none;
+  padding:4px 12px; border-radius:5px;
+  font-size:12px; cursor:pointer; white-space:nowrap;
+  font-family:inherit; transition:background 0.15s;
+  pointer-events:auto; flex-shrink:0;
+}
+.CC-toast-btn:hover { background:#5a6fd6; }
+
+/* ── Multi-column selection bar ── */
+#CC-select-bar {
+  position:fixed; bottom:0; left:0; right:0; z-index:2147483645;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:#fff;
+  display:flex; align-items:center; gap:10px;
+  padding:10px 20px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:13px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.2);
+  animation:CC-slideUpBar 0.2s ease;
+}
+@keyframes CC-slideUpBar { from{transform:translateY(100%)} to{transform:translateY(0)} }
+
+#CC-sel-count { flex:1; font-weight:600; }
+
+#CC-select-bar button {
+  background:rgba(255,255,255,0.2);
+  color:#fff; border:1px solid rgba(255,255,255,0.4);
+  padding:5px 14px; border-radius:6px;
+  font-size:12px; cursor:pointer; font-family:inherit;
+  transition:background 0.15s;
+}
+#CC-select-bar button:hover { background:rgba(255,255,255,0.35); }
+#CC-sel-clear { background:rgba(255,255,255,0.08) !important; }

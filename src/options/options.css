@@ -1,0 +1,142 @@
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#f5f6fa;color:#222}
+.hidden{display:none!important}
+
+#container{min-width:640px;max-width:780px;width:90%;margin:3em auto 4em}
+
+#header-row{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+#icon{height:48px;width:48px;flex-shrink:0}
+h1{font-size:28px;font-weight:700;color:#1a1a2e;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+#pro-title-badge{font-size:13px;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:2px 10px;border-radius:20px;vertical-align:middle}
+#tagline{margin:0;font-size:13px;color:#777}
+
+/* Code element */
+code {
+  background: #eaeaea;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 90%;
+}
+
+/* Backup & Restore styling */
+.backup-restore-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.backup-restore-item .description {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+.backup-restore-item .button-group {
+  display: flex;
+  gap: 10px;
+}
+.status-msg {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* Fieldsets */
+fieldset{background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:20px 24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+legend{font-size:13px;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.5px;padding:0 6px}
+.form-item{margin-bottom:20px}
+.form-item:last-child{margin-bottom:0}
+.form-item label{display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px}
+.input{display:inline-flex;align-items:center;min-height:40px;min-width:200px;padding:4px 12px;border:1px solid #ccc;border-radius:7px;background:#fafafa;color:#555;cursor:pointer;transition:border .15s,box-shadow .15s}
+.input.focus{border-color:rgba(82,168,236,.8);box-shadow:0 0 0 3px rgba(82,168,236,.2);outline:none}
+.key{display:inline-block;padding:4px 10px;border:1px solid #ddd;border-radius:4px;box-shadow:2px 2px 0 rgba(0,0,0,.15);font-size:13px;background:#fff}
+.sep{display:inline-block;padding:0 4px;font-size:13px;color:#999}
+
+.radio-label{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#444;margin-bottom:8px;cursor:pointer;line-height:1.5}
+
+#actions-row{display:flex;align-items:center;gap:14px;margin-top:4px}
+.btn{padding:9px 20px;border-radius:7px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:opacity .15s}
+.btn-secondary{background:#f0f0f0;color:#444}
+.btn-secondary:hover{background:#e4e4e4}
+#saved-msg{font-size:13px;color:#166534;font-weight:500}
+
+.opt-toast{position:fixed;bottom:24px;right:24px;background:#1a1a2e;color:#fff;padding:10px 18px;border-radius:8px;font-size:13px;box-shadow:0 4px 20px rgba(0,0,0,.2);opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;z-index:9999}
+.opt-toast.visible{opacity:1;transform:translateY(0)}
+.opt-toast a{color:#a78bfa}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+  h1 {
+    color: #f8fafc;
+  }
+  #tagline {
+    color: #94a3b8;
+  }
+  fieldset {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  }
+  legend {
+    color: #94a3b8;
+  }
+  .form-item label {
+    color: #f1f5f9;
+  }
+  .backup-restore-item .description {
+    color: #94a3b8;
+  }
+  .input {
+    background: #1e293b;
+    border-color: #475569;
+    color: #e2e8f0;
+  }
+  .input.focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56,189,248,.15);
+  }
+  .key {
+    background: #334155;
+    border-color: #475569;
+    box-shadow: 2px 2px 0 rgba(0,0,0,.4);
+    color: #f1f5f9;
+  }
+  .sep {
+    color: #64748b;
+  }
+  .radio-label {
+    color: #cbd5e1;
+  }
+  code {
+    background: #334155;
+    color: #f1f5f9;
+  }
+  .btn-secondary {
+    background: #334155;
+    color: #f1f5f9;
+  }
+  .btn-secondary:hover {
+    background: #475569;
+  }
+  .msg-success {
+    background: #064e3b;
+    color: #a7f3d0;
+  }
+  .msg-error {
+    background: #7f1d1d;
+    color: #fca5a5;
+  }
+  .opt-toast {
+    background: #1e293b;
+    box-shadow: 0 4px 20px rgba(0,0,0,.5);
+    border: 1px solid #334155;
+  }
+  #saved-msg {
+    color: #4ade80;
+  }
+}
+

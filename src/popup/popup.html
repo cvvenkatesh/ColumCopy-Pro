@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ColumnCopy Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="header">
+    <img src="../../icons/icon48.png" alt="ColumnCopy" id="logo">
+    <div>
+      <div id="title">ColumnCopy Pro</div>
+    </div>
+  </div>
+
+  <div id="shortcuts">
+    <div class="sc-row">
+      <span class="sc-key">Alt + Click</span>
+      <span class="sc-label">Copy column</span>
+    </div>
+    <div class="sc-row pro-row">
+      <span class="sc-key">Shift+Alt + Click</span>
+      <span class="sc-label">Copy table</span>
+    </div>
+    <div class="sc-row pro-row">
+      <span class="sc-key">Right-click menu</span>
+      <span class="sc-label">Export CSV, TSV, JSON, MD, SQL&hellip;</span>
+    </div>
+    <div class="sc-row pro-row">
+      <span class="sc-key">Right-click menu</span>
+      <span class="sc-label">Multi-column select &amp; Pin</span>
+    </div>
+  </div>
+
+  <div id="pinned-section" class="hidden">
+    <div id="pinned-title">&#128204; Pinned Columns</div>
+    <ul id="pinned-list"></ul>
+  </div>
+
+  <div id="history-section" class="hidden">
+    <div id="history-title">Recent Copies</div>
+    <div id="history-search-wrap">
+      <input id="history-search" type="text" placeholder="&#128269; Search history&hellip;" autocomplete="off" spellcheck="false">
+    </div>
+    <ul id="history-list">
+      <li class="history-empty">No copies yet &mdash; Alt+Click any table cell!</li>
+    </ul>
+  </div>
+
+  <div id="footer">
+    <a href="#" id="options-link">&#9881; Settings</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

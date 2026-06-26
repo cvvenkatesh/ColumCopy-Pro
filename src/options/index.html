@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ColumnCopy Pro &mdash; Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<div id="container">
+
+  <div id="header-row">
+    <img id="icon" src="../../icons/icon48.png" alt="ColumnCopy">
+    <div>
+      <h1>ColumnCopy Pro</h1>
+      <p id="tagline">Copy table columns instantly.</p>
+    </div>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Keyboard shortcuts</legend>
+      <div class="form-item">
+        <label>Copy one column</label>
+        <span>Click + </span>
+        <span class="input" id="columnHotkey"><span class="key">Alt</span></span>
+      </div>
+      <div class="form-item" id="table-hotkey-row">
+        <label>Copy whole table</label>
+        <span>Click + </span>
+        <span class="input" id="tableHotkey"><span class="key">Alt</span><span class="sep">+</span><span class="key">Shift</span></span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Output options</legend>
+      <div class="form-item">
+        <label>Hyperlink mode</label>
+        <div>
+          <label class="radio-label">
+            <input type="radio" name="hyperlinkMode" id="hyperlinkMode-off" value="off">
+            Copy raw text (no hyperlinks)
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="hyperlinkMode" id="hyperlinkMode-excel" value="excel">
+            Excel-style: <code>=HYPERLINK("url","text")</code>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="hyperlinkMode" id="hyperlinkMode-markdown" value="markdown">
+            Markdown: <code>[text](url)</code>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="hyperlinkMode" id="hyperlinkMode-html" value="html">
+            HTML: <code>&lt;a href="url"&gt;text&lt;/a&gt;</code>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Backup &amp; Restore</legend>
+      <div class="form-item backup-restore-item">
+        <p class="description">Export or import your settings, pins, and copy history.</p>
+        <div class="button-group">
+          <button type="button" id="exportBackup" class="btn btn-secondary">Export Backup</button>
+          <button type="button" id="importBackupBtn" class="btn btn-secondary">Import Backup</button>
+          <input type="file" id="importFileInput" accept=".json" style="display: none;">
+        </div>
+        <div id="backup-status-msg" class="status-msg hidden"></div>
+      </div>
+    </fieldset>
+
+    <div id="actions-row">
+      <button id="resetDefault" class="btn btn-secondary">Reset to defaults</button>
+      <span id="saved-msg" class="hidden">&#10003; Saved</span>
+    </div>
+  </form>
+
+</div>
+<script src="../../js/jquery/jquery.js"></script>
+<script src="../../js/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

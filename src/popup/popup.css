@@ -1,0 +1,137 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:320px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#222;background:#fff}
+.hidden{display:none!important}
+
+#header{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;border-bottom:1px solid #eee}
+#logo{width:32px;height:32px}
+#title{font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:3px}
+
+
+#shortcuts{padding:10px 16px 6px;border-bottom:1px solid #eee}
+.sc-row{display:flex;align-items:center;gap:6px;padding:5px 0}
+.sc-key{font-family:"SF Mono","Fira Code",monospace;font-size:11px;background:#f3f4f6;border:1px solid #d1d5db;border-radius:4px;padding:2px 6px;white-space:nowrap;min-width:130px}
+.sc-label{flex:1;font-size:12px;color:#444}
+
+/* ── Pinned columns ── */
+#pinned-section{border-bottom:1px solid #eee}
+#pinned-title{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.6px;padding:8px 16px 4px}
+#pinned-list{list-style:none;padding:0 0 4px}
+.pinned-item{display:flex;align-items:center;gap:6px;padding:5px 10px 5px 16px;border-top:1px solid #f5f5f5}
+.pinned-item:hover{background:#fafafa}
+.pin-label{flex:1;font-size:12px;color:#444;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pin-copy-btn{font-size:11px;background:#667eea;color:#fff;border:none;padding:2px 9px;border-radius:4px;cursor:pointer;font-family:inherit;transition:background .15s}
+.pin-copy-btn:hover{background:#5a6fd6}
+.pin-del-btn{font-size:11px;background:none;color:#bbb;border:none;cursor:pointer;padding:2px 4px;font-family:inherit}
+.pin-del-btn:hover{color:#e53e3e}
+
+/* ── History ── */
+#history-section{border-bottom:1px solid #eee}
+#history-title{font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.6px;padding:8px 16px 4px}
+#history-search-wrap{padding:0 16px 6px}
+#history-search{width:100%;font-size:12px;padding:5px 10px;border:1px solid #e0e0e0;border-radius:6px;outline:none;font-family:inherit;color:#444;background:#fafafa}
+#history-search:focus{border-color:#667eea;box-shadow:0 0 0 2px rgba(102,126,234,.15)}
+#history-list{list-style:none;max-height:160px;overflow-y:auto;padding:0 0 4px}
+.history-empty{font-size:12px;color:#aaa;padding:8px 16px;font-style:italic}
+.history-item{display:flex;align-items:center;gap:6px;padding:5px 16px;border-top:1px solid #f5f5f5}
+.history-item:hover{background:#fafafa}
+.h-type{font-size:11px;font-weight:600;color:#667eea;min-width:58px;white-space:nowrap}
+.h-preview{flex:1;font-size:11px;color:#555;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h-time{font-size:10px;color:#aaa;white-space:nowrap}
+
+#footer{display:flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px}
+#footer a{font-size:12px;color:#667eea;text-decoration:none}
+#footer a:hover{text-decoration:underline}
+.sep{color:#ccc}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+  #header {
+    border-bottom-color: #334155;
+  }
+  #title {
+    color: #f8fafc;
+  }
+  #shortcuts {
+    border-bottom-color: #334155;
+  }
+  .sc-key {
+    background: #334155;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+  .sc-label {
+    color: #cbd5e1;
+  }
+  #pinned-section {
+    border-bottom-color: #334155;
+  }
+  #pinned-title {
+    color: #64748b;
+  }
+  .pinned-item {
+    border-top-color: #1e293b;
+  }
+  .pinned-item:hover {
+    background: #1e293b;
+  }
+  .pin-label {
+    color: #cbd5e1;
+  }
+  .pin-copy-btn {
+    background: #4f46e5;
+    color: #fff;
+  }
+  .pin-copy-btn:hover {
+    background: #4338ca;
+  }
+  .pin-del-btn {
+    color: #64748b;
+  }
+  .pin-del-btn:hover {
+    color: #f87171;
+  }
+  #history-section {
+    border-bottom-color: #334155;
+  }
+  #history-title {
+    color: #64748b;
+  }
+  #history-search {
+    border-color: #334155;
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+  #history-search:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+  .history-empty {
+    color: #64748b;
+  }
+  .history-item {
+    border-top-color: #1e293b;
+  }
+  .history-item:hover {
+    background: #1e293b;
+  }
+  .h-type {
+    color: #818cf8;
+  }
+  .h-preview {
+    color: #cbd5e1;
+  }
+  .h-time {
+    color: #64748b;
+  }
+  #footer a {
+    color: #818cf8;
+  }
+  .sep {
+    color: #475569;
+  }
+}
+
